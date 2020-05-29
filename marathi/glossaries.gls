@@ -1,0 +1,20 @@
+\newglossaryentry{अक्षरजुळणी}{name={अक्षरजुळणी},description={Typesetting}}
+\newglossaryentry{बीजधारिका}{name={बीजधारिका},description={Source file. पर्यायी - स्रोत-धारिका}}
+\newglossaryentry{आज्ञासंच}{name={आज्ञासंच},description={Package}}
+\newglossaryentry{चालक}{name={चालक},description={Compiler}}
+\newglossaryentry{लाटेक्-वर्ग}{name={लाटेक्-वर्ग},description={Document class}}
+\newglossaryentry{टंक}{name={टंक},description={Font}}
+\newglossaryentry{टेक्-वितरण}{name={टेक्-वितरण},description={\TeX-distribution}}
+\newglossaryentry{प्राचल}{name={प्राचल},description={Parameter, option}}
+\newglossaryentry{साहाय्यक धारिका}{name={साहाय्यक धारिका},description={Auxiliary files}}
+\newglossaryentry{आज्ञापीठ}{name={आज्ञापीठ},description={Preamble}}
+\newglossaryentry{धारिका}{name={धारिका},description={Files}}
+\newglossaryentry{मूलटंक}{name={मूलटंक},description={Default font}}
+\newglossaryentry{पायाभूत माहिती}{name={पायाभूत माहिती},description={Metadata}}
+\newglossaryentry{फलित-धारिका}{name={फलित-धारिका},description={Output file}}
+\newglossaryentry{कार्यघटक}{name={कार्यघटक},description={Argument}}
+\newglossaryentry{आज्ञा}{name={आज्ञा},description={Command}}
+\newglossaryentry{आज्ञावली}{name={आज्ञावली},description={Program}}
+\newglossaryentry{अडचण}{name={अडचण},description={Error}}
+%\newglossaryentry{}{name={},description={}}
+%\newglossaryentry{}{name={},description={}}

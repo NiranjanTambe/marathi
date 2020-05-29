@@ -1,0 +1,270 @@
+% \iffalse meta-comment
+%
+% File: marathi.dtx
+% ---------------------------------------------------------------------------
+% आज्ञासंच:		marathi
+% लेखक:		निरंजन
+% माहिती:	लुआ-लाटेक् व झी-लाटेक् ह्यांच्यासह मराठीचा सुलभ वापर करण्यासाठी.
+% दुवा:   https://gitlab.com/niranjanvikastambe/marathi
+% अडचणी:  https://gitlab.com/niranjanvikastambe/marathi/-/issues
+% परवाना:      लाटेक् प्रकल्प परवाना. आवृत्ती १.३सी किंवा त्यापुढील.
+% ---------------------------------------------------------------------------
+% हे काम लाटेक् प्रकल्प परवान्याच्या अटींचे पालन करून वितरित केले जाऊ शकते
+% तसेच सुधारले जाऊ शकते.
+% 
+% The latest version of this license is in
+% 
+% http://www.latex-project.org/lppl.txt.
+% 
+% हा आज्ञासंचाची लाटेक् प्रकल्पाच्या नियमांनुसार देखरेख केली जात आहे.
+% 
+% ह्या आज्ञासंचाचा लेखक व पालक निरंजन आहे.
+% 
+% ह्या कामात marathi.dtx, marathi.ins तसेच त्यांपासून निर्माण केलेली
+% marathi.sty ही धारिका समाविष्ट आहे.
+% ---------------------------------------------------------------------------
+%
+% \fi
+% \iffalse
+%<*internal>
+\iffalse
+%</internal>
+%<*readme>
+आज्ञासंच:      marathi
+लेखक:       निरंजन
+आवृत्ती:      १.१.१  (२८ मे, २०२०)
+माहिती:  लुआ-लाटेक् व झी-लाटेक् ह्यांच्यासह मराठीचा सुलभ वापर करण्यासाठी.
+दुवा:   https://gitlab.com/niranjanvikastambe/marathi
+अडचणी:  https://gitlab.com/niranjanvikastambe/marathi/-/issues
+परवाना:      लाटेक् प्रकल्प परवाना. आवृत्ती १.३सी किंवा त्यापुढील.
+अधिक माहितीकरिता marathi.dtx ही बीजधारिका पाहा.
+--------------------------------------------------------------------------
+Package:      marathi
+Author:       Niranjan
+Version:      1.1.1  (28 May, 2020)
+Description:  For conveniently typesetting Marathi language with LuaLaTeX and XeLaTeX.
+Repository:   https://gitlab.com/niranjanvikastambe/marathi
+Bug tracker:  https://gitlab.com/niranjanvikastambe/marathi/-/issues
+License:      The LaTeX Project Public License v1.3c or later.
+%</readme>
+%<*internal>
+\fi
+%</internal>
+%<*driver|package>
+\def\marathiPackageName{marathi}
+\def\marathiPackageVersion{१.१.१}
+\def\marathiPackageDate{२८ मे, २०२०}
+\def\marathiPackageDescription{लुआ-लाटेक् व झी-लाटेक् ह्यांच्यासह मराठीचा सुलभ वापर करण्यासाठी.}
+%</driver|package>
+%<*driver>
+\documentclass[10pt]{l3doc}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{devanagaridigits}
+\usepackage{capt-of}
+\renewcommand{\tablename}{कोष्टक}
+\renewcommand{\arraystretch}{1.2}
+\usepackage{standalone}
+\makeatletter
+\RequirePackage{devanagaridigits}
+\def\@arabic#1{\expandafter\devanagaridigits\expandafter{\number#1}}
+\makeatother
+\renewcommand{\theCodelineNo}{{\scriptsize\arabic{CodelineNo}}\quad}
+\setmainfont[Renderer=Harfbuzz,Script=Devanagari,Mapping=devanagarinumerals]{Shobhika}
+\setmonofont[Renderer=Harfbuzz,Script=Devanagari]{Mukta}
+\newfontfamily{\mukta}[Renderer=Harfbuzz,Script=Devanagari]{Mukta}
+\newfontfamily{\sho}{Shobhika}
+\usepackage{minted}
+\usemintedstyle{bw}
+\usepackage{fontawesome5}
+\renewcommand{\glossaryname}{संज्ञासूची}
+\renewcommand{\abstractname}{सारांश}
+\renewcommand{\contentsname}{अनुक्रमणिका}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[sort=use]{glossaries}
+\makenoidxglossaries
+\input{glossaries.gls}
+\RecordChanges
+\begin{document}
+\DocInput{\marathiPackageName.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+%
+%
+% \title{मराठी}
+% \author{निरंजन}
+% \date^^A
+%   {^^A
+%     आवृत्ती \marathiPackageVersion\ \textemdash\ \marathiPackageDate\\[1ex]^^A
+%     {\small\faIcon{gitlab}\quad\url{https://gitlab.com/niranjanvikastambe/marathi}}^^A
+%   }
+%
+% \maketitle
+%
+% \begin{abstract}
+% \XeLaTeX\ चा वापर करून मराठीत \gls{अक्षरजुळणी}\footnote{ह्या दस्तऐवजात लाटेक्-मध्ये प्रचलित असणाऱ्या अनेक इंग्रजी संज्ञांसाठी पर्यायी मराठी संज्ञा वापरण्यात आल्या आहेत, हे सर्व प्रयोग तुलनेने नवे असल्याने ह्याच दस्तऐवजात शेवटी दिलेल्या संज्ञासूचीत सर्व संज्ञांचे इंग्रजी अर्थ दिले आहेत.} शक्य आहे, परंतु सुलभ नाही. \LaTeX\ सह मराठीत अक्षरजुळणी करताना आपली \gls{बीजधारिका} अनेक आज्ञांनी भरून जाते. हा \gls{आज्ञासंच} अशा सर्व उपयुक्त \gls{आज्ञा} आधीच लिहून ठेवतो. त्यामुळे नव्या वापरकर्त्यांना त्या नव्याने शिकाव्या लागत नाहीत. शिवाय {\mukta blindtext} ह्या आज्ञासंचाप्रमाणे मराठीकरिता नमुना मजकूर उत्पन्न करण्यासाठीची सोय ह्या आज्ञासंचात करण्यात आली आहे. \LuaLaTeX\ हा अत्याधुनिक \gls{चालक} वापरल्यास अंक रोमी लिपीत येतात, ती अडचणदेखील ह्या आज्ञासंचात सोडवण्यात आली आहे.
+% \end{abstract}
+%
+%\tableofcontents
+%
+% \begin{documentation}
+% \section{प्रस्तावना}
+% लाटेक्-मध्ये मराठीचा वापर करताना सर्वात महत्त्वाची गरज म्हणजे देवनागरी लिपी नीट दिसणे. लाटेक् विकसित झाले तेव्हा युनिकोड ही प्रणाली अस्तित्वात नसल्याने टेक्, लाटेक् ह्यांसारख्या चालकांसह युनिकोड अक्षरे वापरता येत नाहीत, परंतु लवकरच युनिकोड अक्षरांचा वापर लाटेक्-मध्ये करता यावा ह्याकरिता \XeLaTeX\ (झी-लाटेक्) तसेच \LuaLaTeX\ (लुआ-लाटेक्) ह्या नव्या चालकांचा विकास झाला. {\mukta fontspec} सदृश आज्ञासंचासह एखादा युनिकोड-आधारित \gls{टंक} वापरणे व युनिकोड-मजकूर थेट झी-लाटेक् अथवा लुआ-लाटेक्-सोबत चालवणे हे ह्या नव्या चालकांचे प्रमुख उद्दिष्ट होते, परंतु हे काम अतिशय गुंतागुंतीचे होते. २०२० चे \gls{टेक्-वितरण} येईपर्यंत व त्यात हर्फ़बझ नावाची नवी \gls{आज्ञावली} येेईपर्यंत लुआ-लाटेक् देवनागरी हाताळू शकलेच नाही. झी-लाटेक्-सह मात्र देवनागरी व्यवस्थित दिसणे शक्य होत होते.
+% \subsection*{देवनागरी दिसण्यासाठी टाकावयाच्या आज्ञा}
+% देवनागरी योग्य तऱ्हेने दिसण्यासाठी काही आज्ञांचा वापर करणे अनिवार्य होते. देवनागरी लिपी दस्तऐवजात दाखवण्यासाठी लागणाऱ्या किमान आज्ञा पुढीलप्रमाणे.
+% \begin{minted}[linenos]{latex}
+% % !TEX TS-program = xelatex
+% \documentclass{article}
+% \usepackage{fontspec}
+% \setmainfont{Shobhika} % अथवा कोणताही युनिकोड-आधारित देवनागरी टंक
+%
+% \begin{document}
+%    नमस्कार
+% \end{document}
+% \end{minted}
+%
+% ह्या उदाहरणाने देवनागरी दिसत असले तरी फलित मात्र हवे तसे दिसत नाही. जोडाक्षरे तुटक दिसतात (उदा. {\sho नमस्कार}). त्यासाठी \mintinline{latex}{\setmainfont} ह्या आज्ञेस {\mukta Script=Devanagari} असे \gls{प्राचल} द्यावे लागते. पुढील अडचण म्हणजे लाटेक् आपोआप पुरवणारे आकडे (उदा. पृष्ठक्रमांक, तळटिपांचे क्रमांक) देवनागरीत न येणे. त्याकरिता ह्याच आज्ञेस {\mukta Mapping=devanagarinumerals} असे आणखी एक प्राचल द्यावे लागते. इतके करूनही भाषेचा प्रश्न उरतोच! उदा. लाटेक्-ला इंग्रजीव्यतिरिक्त इतर कोणतीही भाषा कळत नसल्यामुळे मूलभूत इंग्रजी शब्दांची भाषांतरे पुरवणारे बेबल अथवा पॉलिग्लॉसिया ह्यांसारखे आज्ञासंच वापरून भाषा निवडावी लागते. रोहित होळकरांच्या \href{https://ctan.org/pkg/latex-mr?lang=en}{\mukta latex-mr} ह्या पुस्तिकेत ह्या सर्व अडचणींची तपशीलवार चर्चा झाली आहे.
+
+% सद्यपरिस्थितीत लाटेक्-चे किमान ज्ञान असलेल्या नव्या वापरकर्त्याला मराठी लिहिण्यासाठी एवढा सगळा प्रपंच करायला लावणे म्हणजे ज्या फांदीवर आपण बसलो आहोत तीच तोडण्यासारखे आहे. त्यामुळे कोणत्याही वापरकर्त्याला केवळ लाटेक्-च्या किमान ज्ञानासह \mintinline{latex}{\usepackage{marathi}} एवढी एक आज्ञा लिहून उत्तम देवनागरी अक्षरजुळणी करता यावी हा ह्या आज्ञासंचाचा उद्देश आहे. ह्या आज्ञासंचात पुढील आज्ञांचा समावेश आहे.
+% \begin{function}{\परिच्छेद}
+% ही आज्ञा केवळ एक नमुना परिच्छेद निर्माण करते. ही आज्ञा एकामागोमाग एक अनेकदा टाकल्याने तितके परिच्छेद निर्माण केले जाऊ शकतात.
+% \end{function}
+% \begin{function}{\नमुना}
+%    नमुना ही आज्ञा सर्वप्रथम दिलेला \gls{लाटेक्-वर्ग} पाहते व त्यानुसार त्या वर्गाच्या किमान क्षमता दर्शवणारी एक \gls{फलित-धारिका} निर्माण करते. उदाहरणादाखल {\mukta article, book, report, beamer व letter} ह्या लाटेक्-वर्गांसह \mintinline{latex}{\नमुना} ही आज्ञा चालवून पाहा. एकाच बीजधारिकेत केवळ लाटेक्-वर्ग बदलत असाल, तर लाटेक्-ने तयार केलेल्या \gls{साहाय्यक धारिका} काही वेळा अनपेक्षित \gls{अडचण} दाखवतात. जुनी माहिती शिल्लक असल्याने त्या दिल्या जातात. घाबरून न जाता, बीजधारिका दोनदा चालवावी. सर्व अडचणी सुटतात.
+% \end{function}
+% \begin{function}{\टंक}
+% \begin{syntax}
+% \cs{टंक} \marg{टंकाचे नाव}
+% \end{syntax}
+% ह्या आज्ञासंचात शोभिका हा \gls{मूलटंक} म्हणून निवडून ठेवला आहे. तो बदलायचा असेल तर \mintinline{latex}{\टंक} ह्या आज्ञेची सोय करण्यात आली आहे. ह्या आज्ञेसह आपोआप देवनागरी टंकांसाठी आवश्यक असणारी {\mukta Renderer=Harfbuzz,Script=Devanagari,Mapping=devanagarinumerals} ही प्राचले लिहून ठेवली आहेत. शिवाय \mintinline{latex}{\setmainfont{टंकाचे नाव}} ही आज्ञा नेहमीप्रमाणे चालतेच. टंकाचे नाव हा \mintinline{latex}{\टंक} ह्या आज्ञेचा \gls{कार्यघटक} आहे.
+% \end{function}
+%\begin{function}{अंतर}
+% हे प्राचल वापरल्यास आज्ञासंचातर्फे दोन ओळींमधील अंतरात कोणताही हस्तक्षेप केला जात नाही. अधिक माहितीसाठी \ref{अंतर} वाचा. ह्या प्राचलाला किंमतदेखील देता येते. उदा. \verb|\usepackage[अंतर=2]{marathi}| अशा प्रकारे आज्ञासंच वापरल्यास ओळींमधले अंतर दुप्पट होते. कोणत्याही प्राचलाशिवाय वापरल्यास आज्ञासंचातर्फे मूलभूत अंतराच्या दीडपट अंतर पुरवले जाते. पुढील कोष्टकाने अंतर ह्या प्राचलाचा वापर अधिक स्पष्ट होईल.\label{प्राचल}
+%\begin{center}
+% \includestandalone{table}
+% \captionof{table}{अंतर}
+%\end{center}
+% \end{function}
+%\begin{function}{\बदल}
+%\begin{syntax}
+%    \cs{बदल}\marg{अंतर = \underline{किंमत}}
+%\end{syntax}
+% दस्तऐवजात कुठेही अंतर बदलावयाचे असल्यास बदल ह्या आज्ञेने ते बदलता येते. ह्या आज्ञेला एक कार्यघटक आहे. त्यात अंतर असे लिहून ओळींमधले मूळ अंतर जितक्या पटींनी बदलायचे आहे ती किंमत टाकावी. पुढील उदाहरण पाहा.
+% \begin{minted}[linenos]{latex}
+%	\documentclass{article}
+%	\usepackage{marathi}
+%
+%	\begin{document}
+%	\परिच्छेद
+%	\बदल{अंतर=5}
+%	\परिच्छेद
+%	\end{document}    
+% \end{minted}
+%\end{function}
+% \end{documentation}
+% 
+% \StopEventually{\PrintIndex}
+% 
+% \begin{implementation}
+% \section{आज्ञासंचाची घडण}
+% आता आपण आज्ञासंचाची घडण व त्यातील आज्ञांचा उपयोग लक्षात घेऊयात.
+%    \begin{macrocode}
+%<@@=marathi>
+%<*package>
+%    \end{macrocode}
+%    \begin{macrocode}
+\ProvidesPackage{marathi} 
+\NeedsTeXFormat{LaTeX2e}
+%    \end{macrocode}
+% ह्या आज्ञांसह आज्ञासंचाची पायाभूत माहिती पुरवली.
+% \subsection{अंतर}\label{अंतर}
+% इंग्रजीमधली g, j, y अशी अक्षरे सोडली तर ह्याहून जास्त खोल असणारा मजकूर त्या लिपीत आढळत नाही. देवनागरीचे तसे नाही. क ह्या अक्षराहून क्क थोडे अधिक खोल. ट्ट त्याहून थोडे अधिक व ट्टू त्याहून. अशा असमान उंचीच्या अक्षरांमुळे लाटेक् आपोआप दोन ओळींमधले अंतर बदलते व त्यामुळे ओळींची उंची असमान दिसू लागते. साध्या मजकुरातील ओळींप्रमाणेच कोष्टकेदेखील कुरूप दिसू लागतात. ह्यावर तोडगा काय? ह्याची दोन उत्तरे आहेत. पहिले उत्तर मराठीच्या आजवरच्या छपाईच्या इतिहासाचा अभ्यास करून, मराठी लिहिताना दोन ओळींमध्ये सोडले गेलेले सरासरी अंतर किती ह्याचे संशोधन करणे व त्यानुसार सर्व ठिकाणी ते अंतर लागू करणे. हा मार्ग सहज नाही. हा संशोधनाचा विषय आहे. त्याकरिता टंकाच्या आकाराचे व त्यानुसार बदलणाऱ्या ओळींच्या अंतराचे प्रमाणदेखील काळजीपूर्वक अभ्यासावे लागेल. हे सर्व करणे जरी इष्ट व आवश्यक असले, तरी हे संशोधन पूर्ण होईस्तोवर सामान्य वापरकर्त्याला ज्या आज्ञा शिकण्याचे कष्ट पडतात ते कसे टाळावेत? त्यासाठी तात्पुरता तोडगा काढावा लागतो. तो असा की ओळींमधले अंतर दस्तऐवजाच्या सुरुवातीलाच वाढवून ठेवायचे. त्यासाठी पुढील आज्ञा वापरल्या जातात. ओळींमधल्या अंतरासाठी {\mukta setspace} हा आज्ञासंच वापरावा असा सल्ला जोनाथन स्प्राट ह्यांनी \href{https://topanswers.xyz/tex}{टॉप-आन्सर्स} ह्या संकेतस्थळावर दिला. त्यानुसार हा बदल करत आहे.
+%
+% आमच्या काही सहकाऱ्यांच्या मते हा निर्णय अतिशय उग्र आहे. त्यामुळे दस्तऐवजातील इतर काही ठिकाणच्या अंतरांवर सूक्ष्म परिणाम घडतात, जे टाळणे अधिक इष्ट. त्यांच्या ह्या मताचा विचार करून ह्या आज्ञासंचाकरिता \textbf{अंतर} नावाचे प्राचल विकसित केले आहे. त्याचा वापर कसा केला जावा ही माहिती आपण \ref{प्राचल} मध्ये वाचलीच. हे प्राचल वापरल्यास आज्ञासंचातर्फे ओळींमधल्या अंतरात कोणताही हस्तक्षेप केला जात नाही. त्याकरिता पुढील आज्ञा समाविष्ट केल्या आहेत. ह्या आज्ञांसाठी जूल वोऊ ह्यांच्या टॉप-आन्सर्सवरील \href{https://topanswers.xyz/tex?q=1063#a1276}{ह्या उत्तराची} मदत झाली.
+%    \begin{macrocode}
+\RequirePackage{setspace}
+\RequirePackage{pgfkeys}
+
+\def\बदल#1{\pgfkeys{marathi/.cd,#1}}
+\pgfkeys{
+    marathi/.is family,marathi/.cd,
+    अंतर/.code={\setstretch{#1}\selectfont},
+    अंतर=1.5,
+    अंतर/.default=1
+}
+\DeclareOption*{\expandafter\बदल\expandafter{\CurrentOption}}
+\ProcessOptions
+\def\arraystretch{1.2}
+%    \end{macrocode}
+% \subsection{{\mukta standalone} लाटेक्-वर्ग}
+% {\mukta standalone} हा विशेष लाटेक्-वर्ग केवळ दस्तऐवजात दिलेल्या गोष्टींच्या आकाराचे फलित तयार करण्यासाठी वापरला जातो. उदा. {\mukta article} लाटेक्-वर्गात एखादे कोष्टक टाकले तर पानाच्या नेहमीच्या आकाराइतकी जागा कोष्टकाच्या आजूबाजूला सुटतेच. {\mukta standalone} लाटेक्-वर्गात मात्र तसे न होता केवळ कोष्टकाच्या आकाराइतके फलित निर्माण होते, परंतु ह्या वर्गास {\mukta polyglossia} आज्ञासंच व त्यातून पुरवली जाणारी भाषांतरे अनावश्यक आहेत व म्हणून अडचणी निर्माण होतात. त्यामुळे ह्या लाटेक्-वर्गाकरिता केवळ fontspec हा आज्ञासंच वापरून, इतर सर्व वर्गांसाठी {\mukta polyglossia} हा आज्ञासंच वापरला आहे. त्यामुळे सर्व लाटेक्-वर्गांमध्ये भाषांतरेही मिळतात व {\mukta standalone} वर्गातदेखील आज्ञासंचामुळे कोणतीही अडचण येत नाही. पुढील आज्ञांनी हे साधले आहे.
+%    \begin{macrocode}
+\@ifclassloaded{standalone}{\RequirePackage{fontspec}}{
+    \RequirePackage{polyglossia}
+    \setdefaultlanguage{marathi}
+}
+%    \end{macrocode}
+% \subsection{लुआ-लाटेक्}
+% लुआ-लाटेक् हा अत्याधुनिक चालक आता देवनागरीसाठी उपलब्ध झाला आहे. हर्फ़बझ ह्या लुआविशिष्ट आज्ञावलीच्या मदतीने देवनागरी व्यवस्थित दाखवली जात आहे. अशा वेळी तिचा पुरेपुर उपयोग का करू नये? परंतु वापर करताना सर्व अडचणी सुटायला हव्यात. लुआ-लाटेक् अजूनही अरबी आकड्यांऐवजी देवनागरी आकडे देत नाही. त्याकरिता पुढीलप्रकारे नवीन आज्ञा पुरवल्या आहेत.
+%    \begin{macrocode}
+\RequirePackage{devanagaridigits}
+\def\@arabic#1{\expandafter\devanagaridigits\expandafter{\number#1}}
+%    \end{macrocode}
+% अशा प्रकारे आकडे बदलल्याचा एक फायदा असा की जिथे अरबी आकडे लिहायचे आहेत तिथे तेदेखील लिहिता येतात. झी-लाटेक् व {\mukta Mapping=devanagarinumerals} वापरल्यामुळे अरबी आकडे वापरण्यासाठी नवा टंक वापरावा लागतो.
+% \subsection{टंकनिवड}
+% शोभिका हा लाटेक्-वितरणासह येणारा व देवनागरीची अतिशय चांगली अक्षरजुळणी करणारा टंक आहे. तो मूलटंक म्हणून ह्या आज्ञासंचाद्वारे निवडला जातो. अर्थात तो बदलण्याच्या सुविधेसकट. शिवाय कुठल्याही देवनागरी टंकाचे योग्य फलित दिसण्यासाठी {\mukta Script=Devanagari} हे प्राचल वापरावे लागते. ह्या व अशा इतर काही प्राचलांसकट शोभिकाची निवड करून ठेवणे व त्याशिवाय \mintinline{latex}{\टंक} ह्या आज्ञेद्वारे निवडल्या जाणाऱ्या टंकासदेखील तीच प्राचले वापरणे हे पुढील आज्ञांनी साधले जाते.
+%    \begin{macrocode}
+\setmainfont[Renderer=Harfbuzz,Script=Devanagari,Mapping=devanagarinumerals]{Shobhika}
+\providecommand{\टंक}[1]
+{\setmainfont[Renderer=Harfbuzz,Script=Devanagari,Mapping=devanagarinumerals]{#1}}
+%    \end{macrocode}
+% ह्या आज्ञांमुळे धारिका लुआ अथवा झी-लाटेक् ह्यांपैकी कोणत्याही चालकासह चालवता येते. {\mukta Renderer=Harfbuzz} हे प्राचल लुआविशिष्ट आहे. त्यामुळे झी-लाटेक् वापरल्यास ह्या प्राचलाकडे दुर्लक्ष केले जात आहे अशी एक सूचना आपल्याला मिळते. ही अडचण नसून केवळ एक सूचना आहे. झी-लाटेक्-प्रमाणेच आपणही तिच्याकडे दुर्लक्ष करावे!
+
+% \subsection{नमुना मजकूर}
+% \subsubsection{परिच्छेद}
+% परिच्छेद ही आज्ञा दस्तऐवजात कुठेही वापरली तरी एक लहानसा परिच्छेद आपोआप छापला जातो. त्याकरिता एक मजकूर धारिका आज्ञासंचासोबत येते. ती आज्ञासंचात पुढील आज्ञांनी समाविष्ट करून घेतली आहे.
+%    \begin{macrocode}
+\providecommand{\परिच्छेद}{\input{para}}
+%    \end{macrocode}
+% \subsubsection{दस्तऐवज}
+% मागे म्हटल्याप्रमाणे नमुना मजकूर तयार करण्यासाठी ह्या आज्ञासंचाचा वापर करता येतो, परंतु त्याकरिता लाटेक्-ला थोडी माहिती पुरवावी लागते. उदा. दस्तऐवजाचा/ची लेखक/लेखिका, दस्तऐवजाचं शीर्षक इत्यादी. ही माहिती पुरवण्याचे विशिष्ट स्थान आहे. लाटेक्-मध्ये मूळ दस्तऐवज सुरू होण्यापूर्वी ही माहिती पुरविण्याकरिता \gls{आज्ञापीठ} असते, तिथे ही माहिती पुरवली जाते, परंतु ह्यामुळे फलित-धारिकेच्या \gls{पायाभूत माहिती}त ती नावे दिसू लागतात. ह्यासाठी आज्ञासंचात ही माहिती पुरवली गेली नाही आहे, ह्याउलट सोबत जोडलेल्या वेगवेगळ्या दस्तऐवजांमध्ये ती माहिती पुरवली गेली आहे. त्या धारिका केवळ नमुना मजकूर पुरवण्यासाठी आहेत. निरनिराळ्या लाटेक्-वर्गांसाठी संबंधित धारिका निवडणे व दस्तऐवजात लिहिलेला लाटेक्-वर्ग कोणता आहे हे पाहून त्यानुसार नमुना मजकूर छापणे ह्यासाठीच्या आज्ञा पुढीलप्रमाणे.
+
+%    \begin{macrocode}
+\newcounter{क्र}
+\@ifclassloaded{article}{\setcounter{क्र}{1}}{}
+\@ifclassloaded{book}{\setcounter{क्र}{2}}{}
+\@ifclassloaded{report}{\setcounter{क्र}{3}}{}
+\@ifclassloaded{beamer}{\setcounter{क्र}{4}}{}
+\@ifclassloaded{letter}{\setcounter{क्र}{5}}{}
+\providecommand{\नमुना}{
+    \ifnum\value{क्र}=1\input{article}\else
+    \ifnum\value{क्र}=2\input{book}\else
+    \ifnum\value{क्र}=3\input{report}\else
+    \ifnum\value{क्र}=4\input{beamer}\else
+    \input{letter}\relax\fi\fi\fi\fi
+}
+%    \end{macrocode}
+% {\mukta beamer} लाटेक्-वर्ग वापरताना {\mukta serif} ही टंकछटा निवडावी लागते, त्याशिवाय देवनागरी लिपी दिसत नाही. त्या आज्ञा पुढीलप्रमाणे भरल्या आहेत.
+%    \begin{macrocode}
+\@ifclassloaded{beamer}{%
+    \usefonttheme{serif}}
+\endinput
+%    \end{macrocode}
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+% \end{implementation}
+% \pagebreak
+% \printnoidxglossaries
+%
+% \Finale

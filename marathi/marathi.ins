@@ -1,0 +1,55 @@
+% File: marathi.ins
+\input l3docstrip.tex
+
+\keepsilent
+\askforoverwritefalse
+
+\preamble
+
+-------------------------------------------------------------------------
+आज्ञासंच:      marathi
+लेखक:       निरंजन
+आवृत्ती:      १.१.१  (२८ मे, २०२०)
+माहिती:  लुआ-लाटेक् व झी-लाटेक् ह्यांच्यासह मराठीचा सुलभ वापर करण्यासाठी.
+दुवा:   https://gitlab.com/niranjanvikastambe/marathi
+अडचणी:  https://gitlab.com/niranjanvikastambe/marathi/-/issues
+परवाना:      लाटेक् प्रकल्प परवाना. आवृत्ती १.३सी किंवा त्यापुढील.
+अधिक माहितीकरिता marathi.dtx ही बीज-धारिका पाहा.
+---------------------------------------------------------------------------
+हे काम लाटेक् प्रकल्प परवान्याच्या (१.३सी अथवा त्यापुढील) अटींचे पालन करून वितरित केले जाऊ शकते
+तसेच सुधारले जाऊ शकते.
+
+ह्या परवान्याची नवीनतम प्रत खालील दुव्यावर उपलब्ध आहे.
+
+http://www.latex-project.org/lppl.txt.
+
+हा आज्ञासंचाची लाटेक् प्रकल्पाच्या नियमांनुसार देखरेख केली जात आहे.
+
+ह्या आज्ञासंचाचा लेखक व पालक निरंजन आहे.
+
+ह्या कामात marathi.dtx, marathi.ins तसेच त्यांपासून निर्माण केलेली
+marathi.sty ही धारिका समाविष्ट आहे.
+--------------------------------------------------------------------------
+Package:      marathi
+Author:       Niranjan
+Version:      1.1.1  (28 May, 2020)
+Description:  For conveniently typesetting Marathi language with LuaLaTeX and XeLaTeX.
+Repository:   https://gitlab.com/niranjanvikastambe/marathi
+Bug tracker:  https://gitlab.com/niranjanvikastambe/marathi/-/issues
+License:      The LaTeX Project Public License v1.3c or later.
+---------------------------------------------------------------------------
+
+\endpreamble
+
+\usedir{tex/latex/\jobname}
+\generate{
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
+}
+
+\nopreamble\nopostamble
+\usedir{doc/latex/\jobname}
+\generate{
+  \file{README.txt}{\from{\jobname.dtx}{readme}}
+}
+
+\endbatchfile
