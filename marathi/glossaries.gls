@@ -1,5 +1,5 @@
 \newglossaryentry{अक्षरजुळणी}{name={अक्षरजुळणी},description={Typesetting}}
-\newglossaryentry{बीजधारिका}{name={बीजधारिका},description={Source file. पर्यायी - स्रोत-धारिका}}
+\newglossaryentry{बीजधारिका}{name={बीजधारिका},description={Source file. पर्यायी: स्रोत-धारिका}}
 \newglossaryentry{आज्ञासंच}{name={आज्ञासंच},description={Package}}
 \newglossaryentry{चालक}{name={चालक},description={Compiler}}
 \newglossaryentry{लाटेक्-वर्ग}{name={लाटेक्-वर्ग},description={Document class}}
@@ -16,5 +16,5 @@
 \newglossaryentry{आज्ञा}{name={आज्ञा},description={Command}}
 \newglossaryentry{आज्ञावली}{name={आज्ञावली},description={Program}}
 \newglossaryentry{अडचण}{name={अडचण},description={Error}}
-%\newglossaryentry{}{name={},description={}}
+\newglossaryentry{गणित-क्षेत्र}{name={गणित-क्षेत्र},description={Math mode}}
 %\newglossaryentry{}{name={},description={}}
